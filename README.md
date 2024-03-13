@@ -16,13 +16,16 @@ The detailed description of the usage can be found in the comments within the sc
 
 ## Local Scripts
 
-[List all UID](local/list_all_UID_with_date) -  Downloads and prints all users UID with creation date
+[List all UID](local/list_all_UID_with_date) -  Downloads and prints all users UID with creation date.
 
-[Storage Upload](local/storage_uploader) - Uploads your local files to your Firebase Storage
+[Storage Upload](local/storage_uploader) - Uploads your local files to your Firebase Storage.
+
+[Delete inactive users](local/delete_old_UID) -  Function removes all users who have not been active within the last 30 days.
 
 [Realtime Database data logger](local/storage_uploader) - in progress
 
 
 ## Server-Side Scripts
 
-in progress
+[Delete inactive users](server-side/delete_old_UID) -  Function removes all users who have not been active within the last 30 days.
+Function utilizes Google Scheduler - remember to enable this feature in your Google Cloud project (not in Firebase).

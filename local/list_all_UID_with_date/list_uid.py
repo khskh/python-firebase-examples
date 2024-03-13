@@ -20,7 +20,7 @@ firebase_admin.initialize_app(cred)
 def format_timestamp(timestamp):
     return datetime.fromtimestamp(timestamp / 1000.0).strftime('%Y-%m-%d %H:%M:%S')
 
-
-# print all UID with formatted creation date
-for user in auth.list_users().iterate_all():
-    print('User UID: ' + user.uid + ', Created At: ' + format_timestamp(user.user_metadata.creation_timestamp))
+if __name__ == "__main__":
+    # print all UID with formatted creation date
+    for user in auth.list_users().iterate_all():
+        print('User UID: ' + user.uid + ', Created At: ' + format_timestamp(user.user_metadata.creation_timestamp))

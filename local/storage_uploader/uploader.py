@@ -35,6 +35,7 @@ if __name__ == "__main__":
     Remember to specify the file name you are uploading, as well as the name it will be saved under on the server.
     You don't need to provide file name extensions for files being uploaded to the server. Example below:
     """
+
     data = [
         {"local_path": "your_data1.png",                    "remote_path": "your_data1"},
         {"local_path": "your_data2.png",                    "remote_path": "your_data2.png"},
@@ -47,6 +48,7 @@ if __name__ == "__main__":
     In the 'bucket-name' variable, provide the name of your bucket to which you are uploading files.
     This is an example method for sending files from the 'data' list
     """
+
     for file_info in data:
         uploader.upload_file(file_info["local_path"], file_info["remote_path"], 'your-bucket-name')
         time.sleep(1)
