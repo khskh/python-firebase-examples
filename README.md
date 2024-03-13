@@ -9,7 +9,8 @@ You can install it by following the command:
 pip install firebase-admin
 ```
 
-For individual scripts, more information can be found in the requirements.txt files.
+For individual scripts, more information can be found in the requirements.txt
+or in a separate README.md file in the script directory.
 
 The detailed description of the usage can be found in the comments within the script
 
