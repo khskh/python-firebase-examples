@@ -56,7 +56,8 @@ while True:
 ```
 We get such a result in the database:
 
-*picture*
+![example-git-firebase](https://github.com/khskh/python-firebase-examples/assets/26013076/3011d59f-6ff0-4a26-aa77-071b7d802180)
+
 
 ## License
 
