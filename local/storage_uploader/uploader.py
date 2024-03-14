@@ -12,6 +12,7 @@ import firebase_admin
 from firebase_admin import credentials, storage
 import time
 
+
 class Uploader:
     def __init__(self, service_account_key_path):
         self.service_account_key_path = service_account_key_path
@@ -26,10 +27,10 @@ class Uploader:
         blob = storage.bucket(bucket_name).blob(remote_file_path)
         blob.upload_from_filename(local_file_path)
 
+
 if __name__ == "__main__":
     # Here, specify the location of your 'cred.json' file
     uploader = Uploader(service_account_key_path='cred.json')
-
 
     """
     Remember to specify the file name you are uploading, as well as the name it will be saved under on the server.
@@ -37,12 +38,11 @@ if __name__ == "__main__":
     """
 
     data = [
-        {"local_path": "your_data1.png",                    "remote_path": "your_data1"},
-        {"local_path": "your_data2.png",                    "remote_path": "your_data2.png"},
-        {"local_path": "your_data3.json",                   "remote_path": "your_data3"},
-        {"local_path": "your_data4.json",                   "remote_path": "your_data4.json"},
+        {"local_path": "your_data1.png", "remote_path": "your_data1"},
+        {"local_path": "your_data2.png", "remote_path": "your_data2.png"},
+        {"local_path": "your_data3.json", "remote_path": "your_data3"},
+        {"local_path": "your_data4.json", "remote_path": "your_data4.json"},
     ]
-
 
     """
     In the 'bucket-name' variable, provide the name of your bucket to which you are uploading files.

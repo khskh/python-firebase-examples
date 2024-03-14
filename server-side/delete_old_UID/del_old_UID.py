@@ -3,20 +3,20 @@ from datetime import datetime
 from firebase_functions import scheduler_fn
 from firebase_admin import credentials, auth
 
-
 cred = credentials.Certificate("cred.json")
 firebase_admin.initialize_app(cred)
+
 
 def format_timestamp(timestamp):
     return datetime.fromtimestamp(timestamp / 1000.0).strftime('%Y-%m-%d %H:%M:%S')
 
-"""
-Function utilizes Google Scheduler - remember to enable this feature in your Google Cloud project (not Firebase).
-The CRON expression "0 0 * * *" triggers the function daily at 00:00.
-"""
 
-@scheduler_fn.on_schedule(schedule="0 * * * *")
-def remove_inactive_users():
+@scheduler_fn.on_schedule(schedule="0 0 * * *")
+def remove_inactive_users(event: scheduler_fn.ScheduledEvent) -> None:
+    """
+    Function utilizes Google Scheduler - remember to enable this feature in your Google Cloud project (not Firebase).
+    The CRON expression "0 0 * * *" triggers the function daily at 00:00.
+    """
 
     current_time = datetime.now()
 

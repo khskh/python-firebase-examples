@@ -1,6 +1,6 @@
 # Firebase python examples
 Some of python scripts for Firebase divided into two groups; local and server-side. All local scripts are intended
-to use on your pc, while server-side functions are ready-to-use functions to implement them as Firebase Functions.
+to use on your local machine, while server-side functions are ready-to-use functions to implement them as Firebase Functions.
 
 Most functions require the installation of the firebase-admin library to work correctly. 
 You can install it by following the command:
